@@ -5,13 +5,16 @@ import plotly.graph_objects as go
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # --- CONFIGURATION DE LA PAGE ---
 st.set_page_config(
     page_title="Dashboard Avancé MSAS - CSU Sénégal",
     page_icon="🩺",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="auto"
 )
+
+
 
 
 # --- FONCTION POUR LE TITRE DYNAMIQUE (VERSION ALLER-RETOUR) ---
