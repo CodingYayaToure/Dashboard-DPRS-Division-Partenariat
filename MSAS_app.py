@@ -5,6 +5,14 @@ import plotly.graph_objects as go
 import numpy as np
 import matplotlib.pyplot as plt
 
+# --- CONFIGURATION DE LA PAGE ---
+st.set_page_config(
+    page_title="Dashboard Avancé MSAS - CSU Sénégal",
+    page_icon="🩺",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 
 # --- FONCTION POUR LE TITRE DYNAMIQUE (VERSION ALLER-RETOUR) ---
 def dynamic_typing_header(title, subtitle, title_color="#2F3C7E", cursor_color="#2F3C7E", 
@@ -112,13 +120,6 @@ def dynamic_typing_header(title, subtitle, title_color="#2F3C7E", cursor_color="
     """
     st.components.v1.html(html_code, height=180)
 
-# --- CONFIGURATION DE LA PAGE ---
-st.set_page_config(
-    page_title="Dashboard Avancé MSAS - CSU Sénégal",
-    page_icon="🩺",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 
 
