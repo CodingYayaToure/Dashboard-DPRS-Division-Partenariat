@@ -892,4 +892,41 @@ with st.expander("📋 Explorer, rechercher et télécharger les données détai
 
 # --- FOOTER ---
 st.markdown("---")
-st.markdown("<div style='text-align: center; color: #666;'><p>Dashboard d'Analyse CSU Sénégal - MSAS</p><p><small>Version 4.4 - Propulsé par Streamlit avec style</small></p></div>", unsafe_allow_html=True)
+#st.markdown("<div style='text-align: center; color: #666;'><p>Dashboard d'Analyse CSU Sénégal - MSAS</p><p><small>Version 4.4 - Propulsé par Streamlit avec style</small></p></div>", unsafe_allow_html=True)
+# --- INJECTION DU CSS POUR LE FOOTER ---
+footer_css = """
+<style>
+  /* Espace réservé pour le contenu principal */
+  .css-1d391kg { padding-bottom: 4rem !important; }
+
+  /* Style du footer */
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-color);            /* Couleur de fond selon le thème */
+    color: var(--secondary-text-color);            /* Texte secondaire selon le thème */
+    text-align: center;
+    padding: 0.75rem 0;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--gray) !important;  /* Séparation discrète */
+  }
+  .footer a {
+    color: var(--primary-color);                   /* Lien aux couleurs du thème */
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+<div class="footer">
+  <span>Dashboard d'Analyse CSU Sénégal - MSAS</span>
+  <a href="https://www.streamlit.io/" target="_blank">Streamlit</a>·
+  <a href="https://github.com/votre-repo" target="_blank">v4.7</a>
+</div>
+"""
+
+# Affichage du CSS/HTML
+st.markdown(footer_css, unsafe_allow_html=True)
